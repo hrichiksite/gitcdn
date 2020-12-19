@@ -15,7 +15,6 @@ module.exports = async (request, response) => {
   var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/master/"+ path
 
 
-  if()
 
 
     var req = await fetch(url);
