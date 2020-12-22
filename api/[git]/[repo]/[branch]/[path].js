@@ -27,13 +27,13 @@ module.exports = async (request, response) => {
     var req = await fetch(url);
     var res = await req.text();
 
-if(filetype===js){
+if(filetype==="js"){
                 response.setHeader("content-type", 'text/javascript');
-} else if(filetype===json){
+} else if(filetype==="json"){
                 response.setHeader("content-type", 'application/json');
-} else if(filetype===css){
+} else if(filetype==="css"){
                 response.setHeader("content-type", 'text/css');
-} else if(filetype===png){
+} else if(filetype==="png"){
     response.send("Fetch This File Directly From GitHub, can't waste bandwidth");
 } else {
     response.send("Sorry, File not supported");
