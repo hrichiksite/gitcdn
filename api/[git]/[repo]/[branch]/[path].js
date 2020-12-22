@@ -22,29 +22,25 @@ module.exports = async (request, response) => {
   var branch = request.query.branch;
   var filetype = getExtension(path);
 
-  var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path
+  var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path;
 
     var req = await fetch(url);
     var res = await req.text();
 
 if(filetype==="js"){
                 response.setHeader("content-type", 'text/javascript');
+                 response.send(res);
 } else if(filetype==="json"){
                 response.setHeader("content-type", 'application/json');
+                     response.send(res);
 } else if(filetype==="css"){
                 response.setHeader("content-type", 'text/css');
+                     response.send(res);
 } else if(filetype==="png"){
     response.send("Fetch This File Directly From GitHub, can't waste bandwidth");
 } else {
     response.send("Sorry, File not supported");
 }
-
-
-
-
-
-
-  
 }
 
 
