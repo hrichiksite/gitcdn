@@ -13,7 +13,7 @@ function getExtension(path) {
 }
 
 module.exports = async (request, response) => {
-      response.setHeader("Cache-Control", ' max-age=15780000');
+      response.setHeader("Cache-Control", 'max-age=15780000,stale-while-revalidate');
       response.setHeader("Access-Control-Allow-Origin", '*');
 
   var user = request.query.git;
