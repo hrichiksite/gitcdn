@@ -2,8 +2,8 @@
 {
   
    "rewrites": [
-    { "source": ":git/:repo/:branch/:path/dev", "destination": "/api/dev" },
-    { "source": ":git/:repo/:branch/:path/gh", "destination": "/api/cdn" }
+    { "source": ":git/:repo/:branch/:path/dev", "destination": "/api/gh/dev" },
+    { "source": ":git/:repo/:branch/:path/gh", "destination": "/api/gh/cdn" }
   ]
 
 }
