@@ -3,7 +3,7 @@
   
    "rewrites": [
     { "source": "/dev/:git/:repo/:branch/:path", "destination": "/api/gh/dev/:git/:repo/:branch/:path" },
-    { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/:git/:repo/:branch/:path" }
+    { "source": "/gh/:git/:repo/:branch/:path", "destination": "/apiget" }
   ]
 
 }
