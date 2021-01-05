@@ -2,11 +2,8 @@
 {
   
    "rewrites": [
+         { "source": "/", "destination": "https://gitfire-website.vercel.app" },
     { "source": "/dev/:git/:repo/:branch/:path", "destination": "/api/gh/dev" },
     { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/cdn" }
-  ],
-  "rewrites": [
-    { "source": "/*", "destination": "https://gitfire-website.vercel.app" }
   ]
-
 }
