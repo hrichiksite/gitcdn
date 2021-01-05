@@ -1,6 +1,6 @@
 {
   
-   "rewrites": [
+   "routes": [
     { "source": "dev/gh/:git/:repo/:branch/:path", "destination": "/api/dev" },
     { "source": "gh/:git/:repo/:branch/:path", "destination": "/api/cdn" }
   ]
