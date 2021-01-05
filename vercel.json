@@ -1,4 +1,9 @@
 {
+  
+   "rewrites": [
+    { "source": "/:git/:repo/:branch/:path", "destination": "/api/get" }
+  ]
+
   "headers": [
     {
       "source": "/api/(.*)",
