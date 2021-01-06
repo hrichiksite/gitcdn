@@ -18,7 +18,7 @@ module.exports = async (request, response) => {
 
   var user = request.query.git;
   var repo  = request.query.repo;
-  var path = request.query.dev;
+  var path = request.query.path;
   var branch = request.query.branch;
   var filetype = getExtension(path);
 
