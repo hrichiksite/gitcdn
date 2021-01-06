@@ -6,5 +6,9 @@
          { "source": "/test/:git/:repo/:branch/:path", "destination": "/api/get" },
     { "source": "/dev/:git/:repo/:branch/:path", "destination": "/api/gh/dev" },
     { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/cdn" }
+  ],
+    "redirects": [
+    { "source": "/abuse", "destination": "https://docs.google.com/forms/d/e/1FAIpQLSdrxXm95NM604rtgLq1yJp875sAVHnazy4gnPbWWaWdJfFNbg/viewform" },
+   
   ]
 }
