@@ -27,7 +27,7 @@ module.exports = async (request, response) => {
 
     
     
-if(blacklist.contains(user)){
+if(blacklist.includes(user)){
     response.send("Blacklisted User, Can't Fetch File");
 } else if(filetype==="js"){
         var req = await fetch(url);
