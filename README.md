@@ -9,4 +9,4 @@
 
 
 ## Contributions Are Needed, Please Help
-## 1 We need a system to block bad actors, its quite simple but the cache will still not update for 6 months so it still shows the bad actors content
+## 1) We need a system to block bad actors, its quite simple but the cache will still not update for 6 months so it still shows the bad actors content
