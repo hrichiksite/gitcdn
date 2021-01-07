@@ -1,7 +1,7 @@
 {
-  "name": "test-api",
+  "name": "GitFireAPI",
   "version": "0.0.1",
-  "description": "Sheets API built using serverless functions.",
+  "description": "CDN API built using serverless functions.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
