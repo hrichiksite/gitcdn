@@ -21,7 +21,7 @@ module.exports = async (request, response) => {
   var path = request.query.path;
   var branch = request.query.branch;
   var filetype = getExtension(path);
- var  blacklist = ["hrichiksite", "example"];
+ var  blacklist = ["example"];
 
   var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path;
 
