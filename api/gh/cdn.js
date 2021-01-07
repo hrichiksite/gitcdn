@@ -21,19 +21,27 @@ module.exports = async (request, response) => {
   var path = request.query.path;
   var branch = request.query.branch;
   var filetype = getExtension(path);
+ var  blacklist = ["hrichiksite", "example"];
 
   var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path;
 
-    var req = await fetch(url);
+    
+    
+if(blacklist.includes(user)){
+    response.send("Blacklisted User, Can't Fetch File");
+} else if(filetype==="js"){
+        var req = await fetch(url);
     var res = await req.text();
-
-if(filetype==="js"){
                 response.setHeader("content-type", 'text/javascript');
                  response.send(res);
 } else if(filetype==="json"){
+        var req = await fetch(url);
+    var res = await req.text();
                 response.setHeader("content-type", 'application/json');
                      response.send(res);
 } else if(filetype==="css"){
+        var req = await fetch(url);
+    var res = await req.text();
                 response.setHeader("content-type", 'text/css');
                      response.send(res);
 } else if(filetype==="png"){
@@ -42,6 +50,3 @@ if(filetype==="js"){
     response.send("Sorry, File not supported");
 }
 }
-
-
-
