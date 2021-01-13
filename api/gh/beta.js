@@ -20,7 +20,7 @@ module.exports = async (request, response) => {
   var path = request.query.path;
   var branch = request.query.branch;
   var filetype = getExtension(path);
- var  wlacklist = ["hrichiksite"];
+ var  whitelist = ["hrichiksite"];
 
   var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path;
 
