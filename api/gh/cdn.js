@@ -1,3 +1,4 @@
+/*
 const fetch = require('node-fetch');
 
 //code from https://stackoverflow.com/questions/190852/how-can-i-get-file-extensions-with-javascript
@@ -31,21 +32,22 @@ if(blacklist.includes(user)){
 } else if(filetype==="js"){
         var req = await fetch(url);
     var res = await req.text();
-                response.setHeader("content-type", 'text/javascript');
-                 response.send(res);
+        response.setHeader("content-type", 'text/javascript');
+        response.send(res);
 } else if(filetype==="json"){
         var req = await fetch(url);
     var res = await req.text();
-                response.setHeader("content-type", 'application/json');
-                     response.send(res);
+        response.setHeader("content-type", 'application/json');
+        response.send(res);
 } else if(filetype==="css"){
         var req = await fetch(url);
     var res = await req.text();
-                response.setHeader("content-type", 'text/css');
-                     response.send(res);
+        response.setHeader("content-type", 'text/css');
+        response.send(res);
 } else if(filetype==="png"){
     response.send("Fetch This File Directly From GitHub, can't waste bandwidth");
 } else {
     response.send("Sorry, File not supported");
 }
 }
+*/
