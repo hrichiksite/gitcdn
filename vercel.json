@@ -4,7 +4,7 @@
    "rewrites": [
          { "source": "/", "destination": "https://gitfire-website.vercel.app" },
          { "source": "/test/:git/:repo/:branch/:path", "destination": "/api/get" },
-    { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/cdn" }
+    { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/beta" }
   ],
     "redirects": [
     { "source": "/abuse", "destination": "https://docs.google.com/forms/d/e/1FAIpQLSdrxXm95NM604rtgLq1yJp875sAVHnazy4gnPbWWaWdJfFNbg/viewform" }
