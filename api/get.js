@@ -13,40 +13,41 @@ function getExtension(path) {
 }
 
 module.exports = async (request, response) => {
-      response.setHeader("Access-Control-Allow-Headers", '*');
-      response.setHeader("Access-Control-Allow-Origin", '*');
+  response.setHeader("Access-Control-Allow-Origin", '*');
 
   var user = request.query.git;
   var repo  = request.query.repo;
   var path = request.query.path;
   var branch = request.query.branch;
   var filetype = getExtension(path);
- var  blacklist = ["hrichiksite", "example"];
+ var  whitelist = ["hrichiksite"];
 
   var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path;
 
     
     
-if(blacklist.includes(user)){
-    response.send("Blacklisted User, Can't Fetch File");
-} else if(filetype==="js"){
+if(whitelist.includes(user)){
+ if(filetype==="js"){
         var req = await fetch(url);
     var res = await req.text();
-                response.setHeader("content-type", 'text/javascript');
-                 response.send(res);
+        response.setHeader("content-type", 'text/javascript');
+        response.send(res);
 } else if(filetype==="json"){
         var req = await fetch(url);
     var res = await req.text();
-                response.setHeader("content-type", 'application/json');
-                     response.send(res);
+        response.setHeader("content-type", 'application/json');
+        response.send(res);
 } else if(filetype==="css"){
         var req = await fetch(url);
     var res = await req.text();
-                response.setHeader("content-type", 'text/css');
-                     response.send(res);
+        response.setHeader("content-type", 'text/css');
+        response.send(res);
 } else if(filetype==="png"){
     response.send("Fetch This File Directly From GitHub, can't waste bandwidth");
 } else {
     response.send("Sorry, File not supported");
+}
+} else {
+    response.send("Test environment only for Devs");
 }
 }
