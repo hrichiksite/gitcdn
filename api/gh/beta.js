@@ -20,7 +20,7 @@ module.exports = async (request, response) => {
   var path = request.query.path;
   var branch = request.query.branch;
   var filetype = getExtension(path);
- var  whitelist = ["hrichiksite", "MatejaSrejic", "jquery", "Wruczek", "twbs", "mouse0270"];
+ var  whitelist = ["hrichiksite", "MatejaSrejic", "jquery", "Wruczek", "twbs", "mouse0270", "Nisarga-Developer"];
 
   var url = "https://raw.githubusercontent.com/" + user + "/"+ repo +"/"+ branch +"/"+ path;
 
