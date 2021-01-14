@@ -3,7 +3,9 @@
    "rewrites": [
          { "source": "/", "destination": "https://gitfire-website.vercel.app" },
          { "source": "/gh/cdn/:git/:repo/:branch/:path", "destination": "/api/gh/customcdn" },
-    { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/beta" }
+    { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/beta" },
+    { "source": "/infograchic", "destination": "/gitfire-infographic.jpg" }
+      
   ],
     "redirects": [
     { "source": "/abuse", "destination": "https://docs.google.com/forms/d/e/1FAIpQLSdrxXm95NM604rtgLq1yJp875sAVHnazy4gnPbWWaWdJfFNbg/viewform" }
