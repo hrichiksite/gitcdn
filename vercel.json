@@ -3,7 +3,7 @@
   
    "rewrites": [
          { "source": "/", "destination": "https://gitfire-website.vercel.app" },
-         { "source": "/gh/cdn/:git/:repo/:branch/(?<path>[^/]+)", "destination": "/api/gh/customcdn?path=$path" },
+         { "source": "/gh/cdn/:git/:repo/:branch/(?<path>[^/]+)", "destination": "/api/gh/customcdn?git=:git&repo=:repo&branch=:branch&path=$path" },
     { "source": "/gh/:git/:repo/:branch/:path", "destination": "/api/gh/beta" }
   ],
     "redirects": [
