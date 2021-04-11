@@ -1,3 +1,5 @@
+# This Repo Is No Longer Maintained and is not going to recive any updates, please go to [https://github.com/hrichiksite/gitfire](https://github.com/hrichiksite/gitfire) for the latest
+
 # GitFire CDN 
 
 ## New CDN to serve raw git content ;)
